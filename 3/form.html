@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Подбор Программы - Кэт энерджи: Магазин Функционального питания для котов</title>
+    <base href="https://htmlacademy-adaptive.github.io/1462123-cat-energy-23/3/">
+</head>
+  <body class="page__body">
+    <header class="page-header">
+      <a class="page-header__logo" href="./index.html">
+        <img src="img/logo-mobile.svg" width="34" height="38" alt="Кэт энерджи»">
+      </a>
+      <nav class="main-nav">
+        <button class="main-nav__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item">
+              <a href="./index.html">Главная</a>
+            </li>
+            <li class="site-list__item">
+              <a href="./catalog.html">Каталог Продукции</a>
+            </li>
+            <li class="site-list__item">
+              <a>Подбор Программы</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main class="page-main">
+      <h1 class="page-title">Подбор программы</h1>
+      <section class="application">
+        <h2 class="application__title">Подбор программы</h2>
+        <form class="application__form form" action="https://echo.htmlacademy.ru/courses" method="post">
+          <p class="form__desc">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+          <fieldset>
+            <legend class="visually-hidden">Основная Информация</legend>
+            <label>
+              ИМЯ:*
+              <input type="text" placeholder="барсик" required>
+            </label>
+            <label>
+              Вес (кг):*
+              <input type="number" placeholder="7" required>
+            </label>
+            <label>
+              Возраст (лет):
+              <input type="number" placeholder="7">
+            </label>
+          </fieldset>
+          <fieldset>
+            <legend class="visually-hidden">Выбор программы</legend>
+            <label>
+              <input type="text" name="program" value="slim">
+              похудение
+            </label>
+            <label>
+              <input type="text" name="program" value="pro">
+              Набор массы
+            </label>
+            <label>
+              <input type="text" name="program" value="unknown">
+              Не знаю (Нужен ваш совет)
+            </label>
+          </fieldset>
+          <fieldset>
+            <h2>Контактные данные (владельца кота)</h2>
+            <legend class="contacts">Контактные данные</legend>
+            <label>
+              E-mail:*
+              <input type="email" value="kuklachev@gmail.com" required>
+            </label>
+            <label>
+              Телефон:*
+              <input type="tel" value="8 (960) 900-60-90" required>
+            </label>
+          </fieldset>
+          <fieldset>
+            <h3>Комментарий</h3>
+            <legend></legend>
+            <label>
+              <textarea name="" id="" cols="30" rows="10" value="Расскажите обо всех повАдках кота"></textarea>
+            </label>
+          </fieldset>
+          <fieldset>
+            <legend></legend>
+            <h2>Дополнительно</h2>
+            <label>
+              <input type="checkbox" name="add-ons" value="сахарозаменитель">
+              сахарозаменитель
+            </label>
+            <label>
+              <input type="checkbox" name="add-ons" value="питьевая вода">
+              питьевая вода
+            </label>
+            <label>
+              <input type="checkbox" name="add-ons" value="молоко">
+              молоко
+            </label>
+            <label>
+              <input type="checkbox" name="add-ons" value="витамины">
+              витамины
+            </label>
+          </fieldset>
+          <button type="button">отправить заявку</button>
+          <p>* — Обязательные поля</p>
+        </form>
+      </section>
+    </main>
+    <footer class="page-footer">
+      <p class="page-footer__slogan">приглашаем сотрудничеству дилеров!</p>
+      <address class="page-footer__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+      <div class="page-footer__location"></div>
+      <div class="page-footer__wrapper">
+        <img src="./img/footer-logo.svg" alt="Кэт энерджи логотип">
+        <ul class="social-list">
+          <li class="social-list__item"><a href="#">VK</a></li>
+          <li class="social-list__item"><a href="#">Instagram</a></li>
+          <li class="social-list__item"><a href="#">Facebook</a></li>
+        </ul>
+        <a href="https://www.htmlacademy.ru" class="site-owner">HTML Academy</a>
+      </div>
+    </footer>
+  </body>
+</html>
