@@ -1,0 +1,16 @@
+.service {
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card {
+  padding: 20px;
+  background-color: var(--basic_grey);
+  margin: 20px;
+}
+
+.service-card__title {
+  font-family: var(--font-family_regular);
+  font-size: 1.7rem;
+  line-height: 2rem;
+}

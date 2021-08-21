@@ -1,0 +1,23 @@
+.site-navigation {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.site-navigation__item {
+  padding: 22px;
+  font-family: var(--font-family_regular);
+  font-size: 1.4rem;
+  text-align: center;
+  border-top: 1px solid var(--line-break);
+
+  &:last-of-type {
+    border-bottom: 1px solid var(--line-break);
+  }
+}
+
+.site-navigation__link {
+  font-family: "OswaldMedium", sans-serif;
+  text-decoration: none;
+  color: var(--basic_black);
+}
