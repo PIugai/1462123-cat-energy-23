@@ -1,0 +1,34 @@
+.example {
+  background-color: var(--basic_grey-2);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.example__title {
+  font-family: var(--font-family_regular);
+  font-size: 2.6rem;
+  line-height: 2.2rem;
+}
+
+.example-details {
+  display: flex;
+}
+
+.example-details__wrapper {
+  margin: auto;
+  text-align: center;
+}
+
+.example-details__def {
+  margin: 0;
+}
+
+.example-cost {
+  margin: auto;
+  text-align: center;
+}
+
+.example-cost__def {
+  margin: 0;
+}
