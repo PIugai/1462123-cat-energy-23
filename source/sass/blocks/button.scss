@@ -1,0 +1,17 @@
+.button {
+  padding: 15px 80px;
+  font-family: $font-family_regular;
+  font-size: 1.1rem;
+  line-height: 1.1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $basic_white;
+  background-color: $basic_green;
+  display: block;
+  text-align: center;
+}
+
+.button--neutral {
+  color: $basic_black;
+  background-color: $basic_grey;
+}

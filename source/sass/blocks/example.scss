@@ -1,0 +1,70 @@
+.example {
+  background-color: $basic_grey-2;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "title"
+    "desc"
+    "details"
+    "cost"
+    "image";
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "title ."
+      "desc desc"
+      "details cost"
+      "image image";
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "title image"
+      "desc image"
+      "details image"
+      "cost image";
+  }
+}
+
+.example__title {
+  font-family: $font-family_regular;
+  font-size: 2.6rem;
+  line-height: 2.2rem;
+  grid-area: title;
+}
+
+.example__desc {
+  grid-area: desc;
+}
+
+.example-details {
+  display: flex;
+  grid-area: details;
+}
+
+.example-details__wrapper {
+  margin: auto;
+  text-align: center;
+}
+
+.example-details__def {
+  margin: 0;
+}
+
+.example-cost {
+  margin: auto;
+  text-align: center;
+  grid-area: cost;
+}
+
+.example-cost__def {
+  margin: 0;
+}
+
+.example__wrapper {
+  margin: auto;
+  grid-area: image;
+}

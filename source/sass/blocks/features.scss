@@ -1,0 +1,63 @@
+.features {
+  margin: 20px;
+}
+
+.features__title {
+  font-family: $font-family_regular;
+  font-size: 2.6rem;
+  line-height: 2.2rem;
+}
+
+.features__list {
+  list-style: none;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+}
+
+.features__item {
+  padding-bottom: 20px;
+  padding-left: 36px;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    width: 280px;
+    height: 280px;
+  }
+}
+
+.features__item::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  transform: translate(-30%, -50%);
+}
+
+.features__item--leaf::before {
+  background-image: url("../img/leaf.svg");
+}
+
+.features__item--liquid::before {
+  background-image: url("../img/liquid.svg");
+}
+
+.features__item--fork-knife::before {
+  background-image: url("../img/fork_knife.svg");
+}
+
+.features__item--clock::before {
+  background-image: url("../img/clock.svg");
+}

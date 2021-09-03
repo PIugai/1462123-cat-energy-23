@@ -1,0 +1,57 @@
+.plan__title {
+  font-family: $font-family_regular;
+  font-size: 2.6rem;
+  line-height: 2rem;
+  padding: 20px;
+}
+
+.plan__description {
+  font-family: $font-family_regular;
+  text-transform: uppercase;
+  padding: 20px;
+}
+
+.plan-form {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.plan-form__title {
+  font-family: $font-family_regular;
+  font-size: 1.7rem;
+  line-height: 1.4rem;
+}
+
+.plan-form__fieldset {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  border: 0;
+}
+
+.plan-form__label,
+.plan-form__input {
+  font-family: $font-family_regular;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+
+.plan-form__wrapper {
+  display: grid;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.plan-form__button {
+  margin: 20px;
+}
+
+.plan-form__details {
+  margin: 20px;
+}

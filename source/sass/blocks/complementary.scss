@@ -1,0 +1,45 @@
+.complementary {
+  padding: 20px;
+}
+
+.complementary__title {
+  font-family: $font-family_regular;
+  font-size: 1.7rem;
+  line-height: 1.3rem;
+}
+
+.complementary-product {
+  padding-bottom: 19px;
+  border-bottom: 1px solid $line-break;
+}
+
+.complementary-product__title {
+  font-family: $font-family_regular;
+  font-size: 1.1rem;
+  line-height: 0.9rem;
+}
+
+.complementary-product__desc {
+  line-height: 0.85rem;
+
+  & dd {
+    margin: 0;
+  }
+}
+
+.complementary-promo {
+  font-size: 1.1rem;
+  line-height: 1.1rem;
+  color: $basic_white;
+  background-image: url("../../img/catalog/gift-photo-mobile.jpg");
+  background-repeat: no-repeat;
+  height: 289px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/catalog/gift-photo-mobile@2x.jpg");
+  }
+
+  @media (min-width: $tablet-width) {
+    background-image: url("../img/catalog/gift-photo-mobile@2x.jpg");
+  }
+}
