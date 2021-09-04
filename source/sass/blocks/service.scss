@@ -1,0 +1,57 @@
+.service__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+  }
+}
+
+.service-card {
+  padding: 20px;
+  background-color: $basic_grey;
+  min-width: 280px;
+  margin: 10px 20px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-areas:
+    "logo title"
+    "desc desc"
+    "btn btn";
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 30px;
+    max-width: 708px;
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      "title logo"
+      "desc logo"
+      "btn logo";
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 570px;
+  }
+}
+
+.service-card__logo {
+  grid-area: logo;
+  margin: auto;
+}
+
+.service-card__title {
+  font-family: $font-family_regular;
+  font-size: 1.7rem;
+  line-height: 2rem;
+  grid-area: title;
+}
+
+.service-card__desc {
+  font-family: $font-family_standard;
+  grid-area: desc;
+}
+
+.service-card__btn {
+  grid-area: btn;
+}
