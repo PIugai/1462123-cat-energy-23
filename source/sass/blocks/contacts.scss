@@ -1,5 +1,6 @@
 .contacts {
   padding: 20px;
+  display: flex;
 }
 
 .contacts__wrapper {
@@ -7,15 +8,18 @@
   padding: 28px 22px;
   display: flex;
   justify-content: space-between;
+  padding: 0 20px;
 
   @media (min-width: $desktop-width) {
     position: absolute;
     z-index: 1;
+    margin: auto;
+    max-width: $desktop-width;
   }
 }
 
 .contacts__slogan {
-  font-family: $font-family_regular;
+  font-family: $font-family_oswald;
   font-size: 1.15rem;
   line-height: 1.1rem;
 }

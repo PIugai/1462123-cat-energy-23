@@ -1,3 +1,16 @@
+.service {
+
+  @media (min-width: $desktop-width) {
+    padding: 0 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: auto;
+    max-width: $desktop-width;
+  }
+
+}
+
 .service__wrapper {
   display: flex;
   flex-direction: column;
@@ -41,14 +54,13 @@
 }
 
 .service-card__title {
-  font-family: $font-family_regular;
+  font-family: $font-family_oswald;
   font-size: 1.7rem;
   line-height: 2rem;
   grid-area: title;
 }
 
 .service-card__desc {
-  font-family: $font-family_standard;
   grid-area: desc;
 }
 
