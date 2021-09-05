@@ -1,12 +1,23 @@
+.plan {
+  @media (min-width: $tablet-width) {
+    padding: 0 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: auto;
+    max-width: $desktop-width;
+  }
+}
+
 .plan__title {
-  font-family: $font-family_regular;
+  font-family: $font-family_oswald;
   font-size: 2.6rem;
   line-height: 2rem;
   padding: 20px;
 }
 
 .plan__description {
-  font-family: $font-family_regular;
+  font-family: $font-family_oswald;
   text-transform: uppercase;
   padding: 20px;
 }
@@ -17,7 +28,7 @@
 }
 
 .plan-form__title {
-  font-family: $font-family_regular;
+  font-family: $font-family_oswald;
   font-size: 1.7rem;
   line-height: 1.4rem;
 }
@@ -31,7 +42,7 @@
 
 .plan-form__label,
 .plan-form__input {
-  font-family: $font-family_regular;
+  font-family: $font-family_oswald;
   font-size: 1.1rem;
   text-transform: uppercase;
 }

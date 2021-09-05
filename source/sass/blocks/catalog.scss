@@ -1,6 +1,15 @@
 .catalog {
   display: flex;
   flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: auto;
+    max-width: $desktop-width;
+  }
 }
 
 .catalog__wrapper {
@@ -20,10 +29,9 @@
 }
 
 .catalog__title {
-  font-family: $font-family_regular;
+  font-family: $font-family_oswald;
   font-size: 2.6rem;
   line-height: 2rem;
-  padding: 20px;
 }
 
 .catalog-item {
@@ -52,13 +60,13 @@
 
 .catalog-item__title {
   text-align: center;
-  font-family: $font-family_regular;
+  font-family: $font-family_oswald;
   font-size: 1.2rem;
   line-height: 1.3rem;
 }
 
 .catalog-item__details {
-  font-family: $font-family_standard;
+  font-family: $font-family_oswald;
   font-size: 0.85rem;
   line-height: 0.85rem;
 }

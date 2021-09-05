@@ -20,7 +20,7 @@
 
 .site-navigation__item {
   padding: 22px;
-  font-family: $font-family_regular;
+  font-family: $font-family_oswald;
   font-size: 1.4rem;
   text-align: center;
   border-top: 1px solid $line-break;
@@ -31,7 +31,12 @@
 }
 
 .site-navigation__link {
-  font-family: $font-family_medium;
+  font-family: $font-family_oswald;
+  font-weight: bold;
   text-decoration: none;
   color: $basic_black;
+
+  @media (min-width: $tablet-width) {
+    font-weight: normal;
+  }
 }
