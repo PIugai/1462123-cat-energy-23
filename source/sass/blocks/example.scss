@@ -17,7 +17,7 @@
       "desc desc"
       "details cost"
       "image image";
-      padding: 0 20px;
+    padding: 0 20px;
   }
 
   @media (min-width: $desktop-width) {
@@ -27,8 +27,8 @@
       "desc image"
       "details image"
       "cost image";
-      margin: auto;
-      max-width: $desktop-width;
+    margin: auto;
+    max-width: $desktop-width;
   }
 }
 
