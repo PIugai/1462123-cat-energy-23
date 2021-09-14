@@ -1,0 +1,29 @@
+.social {
+  list-style: none;
+  display: flex;
+  padding: 39px 0;
+  justify-content: space-evenly;
+  align-items: center;
+  border-top: 1px solid $line-break;
+  border-bottom: 1px solid $line-break;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    width: 129px;
+    border: none;
+  }
+
+  .logo__img-svg {
+    fill: $basic-black;
+    stroke: $basic-black;
+
+    &:hover {
+      fill: $basic-green;
+      stroke: $basic-green;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+}

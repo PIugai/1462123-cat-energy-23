@@ -5,30 +5,36 @@
     <title>Подбор Программы - Кэт энерджи: Магазин Функционального питания для котов</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="images/favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="images/favicons/apple.png">
+    <link rel="manifest" href="../manifest.webmanifest">
+    <link rel="preload" href="./fonts/oswaldregular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   </head>
   <body class="page__body">
     <header class="page-header">
-      <nav class="main-navigation">
-        <a class="main-navigation__logo logo" href="#">
+      <nav class="main-navigation main-navigation--opened main-navigation--no-js">
+        <a class="main-navigation__logo logo" href="index.html">
           <picture class="logo__image">
             <source media="(min-width: 1200px)" srcset="./img/logo-desktop.svg">
             <source media="(min-width: 768px)" srcset="./img/logo-tablet.svg">
             <img src="./img/logo-mobile.svg" alt="Кэт энерджи">
           </picture>
-          <img class="main-navigation__logo-text" src="./img/logo-text.svg" alt="Logo">
         </a>
+        <img class="main-navigation__logo-text" src="./img/logo-text.svg" alt="Logo">
         <button class="main-navigation__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
         <ul class="main-navigation__site-navigation site-navigation">
           <li class="site-navigation__item">
-            <a class="site-navigation__link site-navigation__link--active" href="index.html">Главная</a>
+            <a class="site-navigation__link" href="index.html">Главная</a>
           </li>
           <li class="site-navigation__item">
             <a class="site-navigation__link" href="catalog.html">Каталог продукции</a>
           </li>
           <li class="site-navigation__item">
-            <a class="site-navigation__link" aria-label="Текущая страниц: Подбор программы">Подбор программы</a>
+            <a class="site-navigation__link site-navigation__link--active" aria-label="Текущая страниц: Подбор программы">Подбор программы</a>
           </li>
         </ul>
       </nav>
@@ -39,73 +45,79 @@
         <h2 class="plan__title">Подбор программы</h2>
         <p class="plan__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
         <form class="plan-form" action="#">
-          <fieldset class="plan-form__general plan-form__fieldset">
-            <legend class="plan-form__title visually-hidden">Основная информация</legend>
-            <label class="plan-form__label">
-              ИМЯ:*
-              <input class="plan-form__input" type="text" name="name" value="барсик" required>
-            </label>
-            <label class="plan-form__label">
-              Вес (кг):*
-              <input class="plan-form__input" type="number" name="weight" value="7" required>
-            </label>
-            <label class="plan-form__label">
-              Возраст (лет):
-              <input class="plan-form__input" type="number" name="age" value="7">
-            </label>
-          </fieldset>
-          <fieldset class="plan-form__options plan-form__fieldset">
-            <legend class="visually-hidden plan-form__title">Выбор программы</legend>
-            <label class="plan-form__label">
-              похудение
-              <input class="plan-form__input" type="radio" name="plan" value="похудение" checked>
-            </label>
-            <label class="plan-form__label">
-              Набор массы
-              <input class="plan-form__input" type="radio" name="plan" value="Набор массы">
-            </label>
-            <label class="plan-form__label">
-              Не знаю (Нужен ваш совет)
-              <input class="plan-form__input" type="radio" name="plan" value="Не знаю (Нужен ваш совет)">
-            </label>
-          </fieldset>
+          <div class="plan__wrapper">
+            <fieldset class="plan-form__general plan-form__fieldset">
+              <legend class="plan-form__title visually-hidden">Основная информация</legend>
+              <div class="plan-form__group">
+                <label class="plan-form__label" for="name">ИМЯ:*</label>
+                <input class="plan-form__input" type="text" id="name" name="name" value="барсик" required>
+              </div>
+              <div class="plan-form__group">
+                <label class="plan-form__label" for="weight">Вес (кг):*</label>
+                <input class="plan-form__input" type="number" id="weight" name="weight" value="7" required>
+              </div>
+              <div class="plan-form__group">
+                <label class="plan-form__label" for="age">Возраст (лет):</label>
+                <input class="plan-form__input" type="number" id="age" name="age" value="7">
+              </div>
+            </fieldset>
+            <fieldset class="plan-form__options plan-form__fieldset">
+              <legend class="visually-hidden plan-form__title">Выбор программы</legend>
+              <div class="options__wrapper">
+                <label class="plan-form__label plan-form__label--radio">похудение
+                  <input class="plan-form__input" type="radio" name="plan" value="похудение" checked>
+                  <span class="plan-form__radio"></span>
+                </label>
+                <label class="plan-form__label plan-form__label--radio">Набор массы
+                  <input class="plan-form__input" type="radio" name="plan" value="Набор массы">
+                  <span class="plan-form__radio"></span>
+                </label>
+                <label class="plan-form__label plan-form__label--radio">Не знаю (Нужен ваш совет)
+                  <input class="plan-form__input" type="radio" name="plan" value="Не знаю (Нужен ваш совет)">
+                  <span class="plan-form__radio"></span>
+                </label>
+              </div>
+            </fieldset>
+          </div>
           <fieldset class="plan-form__contacts plan-form__fieldset">
             <legend class="plan-form__title">Контактые данные (владельца кота)</legend>
-            <label class="plan-form__label">
-              E-mail:*
-              <input class="plan-form__input" type="email" name="email" placeholder="кuklachev@gmail.com" required>
-            </label>
-            <label class="plan-form__label">
-              Телефон:*
-              <input class="plan-form__input" type="tel" name="tel" placeholder="8 (960) 900-60-90" required>
-            </label>
+            <div class="plan-form__group">
+              <label class="plan-form__label" for="email">E-mail:*</label>
+              <input class="plan-form__input" type="email" id="email" name="email" placeholder="кuklachev@gmail.com" required>
+            </div>
+            <div class="plan-form__group">
+              <label class="plan-form__label" for="tel">Телефон:*</label>
+              <input class="plan-form__input" type="tel" id="tel" name="tel" placeholder="8 (960) 900-60-90" required>
+            </div>
           </fieldset>
           <fieldset class="plan-form__comments plan-form__fieldset">
             <legend class="plan-form__title">Комментарий</legend>
             <label class="plan-form__label" for="comments"></label>
-            <textarea class="plan-form__textarea" name="comments" id="comments" cols="30" rows="10" placeholder="Расскажите обо всех повАдках кота"></textarea>
+            <textarea class="plan-form__textarea" name="comments" id="comments" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
           </fieldset>
           <fieldset class="plan-form__addons plan-form__fieldset">
             <legend class="plan-form__title">Дополнительно</legend>
-            <label class="plan-form__label">
-              <input class="plan-form__input plan-form__input--checkbox" type="checkbox" name="addons" value="sweetener" checked>
-              сахарозаменитель
+            <label class="plan-form__label plan-form__label--checkbox" for="sweetener">сахарозаменитель
+              <input class="plan-form__input" type="checkbox" id="sweetener" name="addons" value="sweetener" checked>
+              <span class="plan-form__checkmark"></span>
             </label>
-            <label class="plan-form__label">
-              <input class="plan-form__input plan-form__input--checkbox" type="checkbox" name="addons" value="water">
-              питьевая вода
+            <label class="plan-form__label plan-form__label--checkbox" for="water">питьевая вода
+              <input class="plan-form__input" type="checkbox" id="water" name="addons" value="water">
+              <span class="plan-form__checkmark"></span>
             </label>
-            <label class="plan-form__label">
-              <input class="plan-form__input plan-form__input--checkbox" type="checkbox" name="addons" value="milk">
-              молоко
+            <label class="plan-form__label plan-form__label--checkbox" for="milk">молоко
+              <input class="plan-form__input" type="checkbox" id="milk" name="addons" value="milk">
+              <span class="plan-form__checkmark"></span>
             </label>
-            <label class="plan-form__label">
-              <input class="plan-form__input plan-form__input--checkbox" type="checkbox" name="addons" value="vitamins">
-              витамины
+            <label class="plan-form__label plan-form__label--checkbox" for="vitamins">витамины
+              <input class="plan-form__input" type="checkbox" id="vitamins" name="addons" value="vitamins">
+              <span class="plan-form__checkmark"></span>
             </label>
           </fieldset>
-          <input class="plan-form__button button" type="submit" value="отправить заявку">
-          <p class="plan-form__details">* — Обязательные поля</p>
+          <div class="plan-form__wrapper">
+            <input class="plan-form__button button" type="submit" value="отправить заявку">
+            <p class="plan-form__details">* — Обязательные поля</p>
+          </div>
         </form>
       </section>
     </main>
@@ -114,13 +126,13 @@
         <h2 class="visually-hidden contacts__title">Наши контакты</h2>
         <div class="contacts__wrapper">
           <p class="contacts__slogan">приглашаем к сотрудничеству дилеров!</p>
-          <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+          <address class="contacts__address">ул. Большая <br/>Конюшенная, д. 19/8<br/> Санкт-Петербург</address>
         </div>
-        <div class="contacts-map">
+        <div class="contacts-map" id="map">
           <picture class="contacts-map__image">
             <source media="(min-width: 1200px)" srcset="img/location-desktop.jpg 1x, img/location-desktop.jpg 2x">
             <source media="(min-width: 768px)" srcset="img/location-tablet.jpg 1x, img/location-tablet.jpg 2x">
-            <img class="works-item__image" src="img/location-mobile.jpg" srcset="img/location-mobile@2x.jpg 2x" alt="Местонахождение">
+            <img src="img/location-mobile.jpg" srcset="img/location-mobile@2x.jpg 2x" alt="Местонахождение">
           </picture>
         </div>
       </section>
@@ -131,25 +143,52 @@
         <ul class="page-footer__social social">
           <li class="social__item">
             <a class="social__link" href="#">
-              Vkontakte
+              <svg class="logo__img-svg" width="23" height="16">
+                <use xlink:href="img/sprite.svg#icon-vkontakte"></use>
+              </svg>
+              <span class="visually-hidden">
+                Vkontakte
+              </span>
             </a>
           </li>
           <li class="social__item">
             <a class="social__link" href="#">
-              Instagram
+              <svg class="logo__img-svg" width="16" height="16">
+                <use xlink:href="img/sprite.svg#icon-instagram"></use>
+              </svg>
+              <span class="visually-hidden">
+                Instagram
+              </span>
             </a>
           </li>
           <li class="social__item">
             <a class="social__link" href="#">
-              Facebook
+              <svg class="logo__img-svg" width="13" height="20">
+                <use xlink:href="img/sprite.svg#icon-facebook"></use>
+              </svg>
+              <span class="visually-hidden">
+                Facebook
+              </span>
             </a>
           </li>
         </ul>
         <a class="page-footer__partner" href="https://www.htmlacademy.ru">
-          HTML Academy
-          <img src="./img/htmlacademy.svg" width="27" height="34" alt="htmlacademy logo">
+          <p>HTML Academy</p>
+          <svg class="logo__img-svg" width="34" height="34">
+            <use xlink:href="img/sprite.svg#icon-academy"></use>
+          </svg>
         </a>
       </div>
     </footer>
+
+    <template id="balloon">
+      <section class="balloon">
+        <h3 class="balloon__title">Кэт Энерджи</h3>
+      </section>
+    </template>
+
+    <script src="./js/nav-toggle.js"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="./js/map.js"></script>
   </body>
 </html>
