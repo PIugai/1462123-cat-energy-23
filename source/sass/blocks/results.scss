@@ -64,6 +64,10 @@
 .results__title {
   grid-area: title;
   margin-bottom: 33px;
+  font-size: 3rem;
+  font-family: $font-family-primary;
+  font-weight: normal;
+  line-height: 2rem;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 64px;
@@ -79,7 +83,7 @@
   grid-area: description;
   margin: 0;
   margin-bottom: 25px;
-  font-family: "Arial", sans-serif;
+  font-family: $font-family-default;
   font-size: 14px;
   line-height: 18px;
 
@@ -157,6 +161,7 @@
 .results__value {
   margin: 0;
   font-size: 24px;
+  font-family: $font-family-primary;
   color: $basic_black;
   text-align: center;
   text-transform: uppercase;
@@ -174,7 +179,7 @@
   margin-right: auto;
   padding-left: 10px;
   padding-right: 10px;
-  font-family: "Arial", sans-serif;
+  font-family: $font-family-default;
   font-size: 12px;
   line-height: 12px;
   text-align: center;
@@ -208,7 +213,7 @@
 
 .results__item--clean .results__name {
   display: inline-block;
-  font-family: "Oswald", "Arial", sans-serif;
+  font-family: $font-family-primary;
   font-size: 14px;
   line-height: 20px;
   color: $basic_black;

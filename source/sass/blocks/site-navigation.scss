@@ -8,6 +8,7 @@
   background-color: $basic-white;
   width: 100%;
   border-bottom: 1px solid $basic-grey;
+  z-index: 1;
 
   @media (min-width: $tablet-width) {
     position: static;
@@ -58,7 +59,7 @@
   }
 }
 
-.site-navigation__link--promo {
+.site-navigation__link-promo {
   @media (min-width: $desktop-width) {
     color: $basic-white;
 
