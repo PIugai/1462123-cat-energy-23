@@ -2,7 +2,8 @@
   margin: 20px;
 
   @media (min-width: $tablet-width) {
-    padding: 0 20px;
+    padding: 0 30px;
+    margin: auto;
   }
 
   @media (min-width: $desktop-width) {
@@ -13,60 +14,70 @@
 
 .features__title {
   font-family: $font-family-primary;
+  font-weight: normal;
   font-size: 2.6rem;
   line-height: 2.2rem;
+  margin-bottom: 38px;
 }
 
 .features__list {
   list-style: none;
+  padding: 0;
 
   @media (min-width: $tablet-width) {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto auto;
     grid-template-rows: 1fr 1fr;
+    gap: 20px;
   }
 
   @media (min-width: $desktop-width) {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: auto auto auto auto;
     grid-template-rows: 1fr;
   }
 }
 
 .features__item {
-  padding-bottom: 20px;
-  padding-left: 36px;
+  display: flex;
+  align-items: center;
   position: relative;
+  margin-bottom: 20px;
+
+  .features__icon {
+    margin-right: 20px;
+  }
 
   @media (min-width: $tablet-width) {
     width: 280px;
+    max-width: 280px;
     height: 280px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 0;
+
+    .features__icon {
+      margin-bottom: 30px;
+    }
   }
 }
 
-.features__item::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 60px;
-  height: 60px;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  transform: translate(-30%, -50%);
+.features__desc {
+  @media (min-width: $tablet-width) {
+    max-width: 240px;
+  }
 }
 
-.features__item--leaf::before {
-  background-image: url("../img/leaf.svg");
-}
+.features__number {
+  display: none;
 
-.features__item--liquid::before {
-  background-image: url("../img/liquid.svg");
-}
-
-.features__item--fork-knife::before {
-  background-image: url("../img/fork_knife.svg");
-}
-
-.features__item--clock::before {
-  background-image: url("../img/clock.svg");
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    top: 35%;
+    right: 0;
+    z-index: -1;
+    font-family: $font-family-primary;
+    font-size: 280px;
+    color: $basic-grey;
+  }
 }

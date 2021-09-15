@@ -9,7 +9,7 @@
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="images/favicons/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="images/favicons/apple.png">
-    <link rel="manifest" href="../manifest.webmanifest">
+    <link rel="manifest" href="./manifest.webmanifest">
     <link rel="preload" href="./fonts/oswaldregular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   </head>
   <body class="page__body">
@@ -53,7 +53,12 @@
         <div class="promo__wrapper">
           <h2 class="promo__title">Функциональное питание для котов</h2>
           <p class="promo__description">Занялся собой? Займись котом!</p>
-          <img class="promo__image" src="./img/index-can-mobile.png" alt="Упаковка Cat Energy PRO">
+          <picture class="promo__image">
+            <source media="(min-width: 1220px)" srcset="img/can-desktop@2x.png 1x, img/can-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/can-tablet.png 1x, img/can-tablet@2x.png 2x">
+            <img src="img/can-mobile.png" srcset="img/can-mobile@2x.png" alt="Cat Energy PRO
+            500 г Курица">
+          </picture>
           <a class="promo__button button" href="#">Подобрать программу</a>
         </div>
       </section>
@@ -62,67 +67,85 @@
         <div class="service__wrapper">
           <article class="service-card">
             <h3 class="service-card__title">Похудение</h3>
-            <img class="service-card__logo" src="./img/cat_back.svg" width="50" height="53" alt="Slim">
+            <img class="service-card__logo" src="./img/cat.svg" width="50" height="53" alt="Slim">
             <p class="service-card__desc">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-            <a class="service-card__btn button button--arrow" href="#">Каталог slim</a>
+            <a class="service-card__btn button button--arrow" href="#">Каталог slim
+              <svg class="service-card__icon" width="24" height="12">
+                <use xlink:href="img/sprite.svg#icon-arrow"></use>
+              </svg>
+            </a>
           </article>
           <article class="service-card">
             <h3 class="service-card__title">Набор массы</h3>
-            <img class="service-card__logo" src="./img/panther_back.svg" width="67" height="50" alt="Pro">
+            <img class="service-card__logo" src="./img/panther.svg" width="67" height="50" alt="Pro">
             <p class="service-card__desc">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
-            <a class="service-card__btn button button--arrow" href="#">Каталог pro</a>
+            <a class="service-card__btn button button--arrow" href="#">Каталог pro
+              <svg class="service-card__icon" width="24" height="12">
+                <use xlink:href="img/sprite.svg#icon-arrow"></use>
+              </svg>
+            </a>
           </article>
         </div>
       </section>
       <section class="features">
         <h2 class="features__title">Как это работает</h2>
         <ul class="features__list">
-          <li class="features__item features__item--leaf">
-            Функциональное питание содержит только полезные питательные вещества.
+          <li class="features__item">
+            <img class="features__icon" src="./img/leaf.svg" width="60" height="60" alt="питательные вещества">
+            <p class="features__desc">Функциональное питание содержит только полезные питательные вещества.</p>
+            <span class="features__number">1</span>
           </li>
-          <li class="features__item features__item--liquid">
-            Выпускается в виде порошка, который нужно лишь залить кипятком и готово.
+          <li class="features__item">
+            <img class="features__icon" src="./img/liquid.svg" width="60" height="60" alt="залить кипятком">
+            <p class="features__desc">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
+            <span class="features__number">2</span>
           </li>
-          <li class="features__item features__item--fork-knife">
-            Замените один-два приема обычной еды на наше функциональное питание.
+          <li class="features__item">
+            <img class="features__icon" src="./img/fork_knife.svg" width="60" height="60" alt="один-два приема">
+            <p class="features__desc">Замените один-два приема обычной еды на наше функциональное питание.</p>
+            <span class="features__number">3</span>
           </li>
-          <li class="features__item features__item--clock">
-            Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!
+          <li class="features__item">
+            <img class="features__icon" src="./img/clock.svg" width="60" height="60" alt="через месяц">
+            <p class="features__desc">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
+            <span class="features__number">4</span>
           </li>
         </ul>
       </section>
-      <section class="example">
-        <div class="example__wrapper">
-          <h2 class="example__title">Живой пример</h2>
-          <p class="example__desc">Борис сбросил 5 кг за 2 месяца, просто заменив свой
-            обычный корм на Cat Energy Slim. Отличный результат
-            без изнуряющих тренировок! При этом он не менял своих
-            привычек и по-прежнему спит по 16 часов в день. </p>
-          <dl class="example-details">
-            <div class="example-details__wrapper">
-              <dt class="example-details__term">5 КГ</dt>
-              <dd class="example-details__def">снижение веса</dd>
+      <section class="results">
+        <div class="container results__container">
+          <h2 class="section__title results__title">Живой пример</h2>
+          <p class="results__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по‑прежнему спит по 16 часов в день.</p>
+          <dl class="results__list">
+            <div class="results__item results__item--bordered">
+              <dt class="results__name">Снижение веса</dt>
+              <dd class="results__value">5 кг</dd>
             </div>
-            <div class="example-details__wrapper">
-              <dt class="example-details__term">60 ДНЕЙ</dt>
-              <dd class="example-details__def">затрачено времени</dd>
+            <div class="results__item results__item--bordered">
+              <dt class="results__name">Затрачено времени</dt>
+              <dd class="results__value">60 дней</dd>
+            </div>
+            <div class="results__item results__item--clean">
+              <dt class="results__name">Затраты на питание:</dt>
+              <dd class="results__value">15 000 РУБ.</dd>
             </div>
           </dl>
-          <dl class="example-cost">
-            <dt class="example-cost__term">15 000 РУБ.</dt>
-            <dd class="example-cost__def">Затраты на питание: </dd>
-          </dl>
-          <div class="example__images">
-            <div class="example__before">
-              <img src="../img/before-mobile.png" alt="До программы">
+          <div class="results__slider slider">
+            <div class="slider__container">
+              <div class="slider__image-wrapper" style="width: 50%;">
+                <picture class="slider__image">
+                  <source media="(min-width: 768px)" srcset="img/before-desktop@2x.png 1x, img/before-desktop@2x.png 2x">
+                  <img src="img/before-mobile.png" srcset="img/before-mobile@2x.png" alt="До">
+                </picture>
+              </div>
+              <picture class="slider__image">
+                <source media="(min-width: 768px)" srcset="img/after-desktop.png 1x, img/after-desktop@2x.png 2x">
+                <img src="img/after-mobile.png" srcset="img/after-mobile@2x.png" alt="После">
+              </picture>
             </div>
-            <div class="example__after"></div>
-          </div>
-          <div class="example-slider">
-            <div class="example-slider__line">
-              <span></span>
+            <div class="slider__controls"><button class="slider__button slider__button--before" type="button">Было</button> <input class="slider__range" type="range" min="0" max="100">
+              <div class="slider__toggle"></div><button class="slider__button slider__button--after" type="button">Стало</button>
             </div>
-            <input class="example-slider__range" type="range" min="0" max="100" value="50">
           </div>
         </div>
       </section>
@@ -194,6 +217,7 @@
     </template>
 
     <script src="./js/nav-toggle.js"></script>
+    <script src="./js/range.js"></script>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script src="./js/map.js"></script>
   </body>
