@@ -1,9 +1,10 @@
 .service {
-  margin-top: 20px;
+  margin-top: 200px;
   padding: 0 20px;
 
   @media (min-width: $tablet-width) {
     padding: 0 30px;
+    margin-top: 50px;
   }
 
   @media (min-width: $desktop-width) {
@@ -47,6 +48,7 @@
 
   @media (min-width: $desktop-width) {
     max-width: 570px;
+    padding: 50px;
   }
 }
 

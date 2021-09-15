@@ -22,10 +22,6 @@
     height: 100%;
     margin-bottom: 0;
   }
-
-  @media (min-width: $desktop-width) {
-    background-image: linear-gradient(to top, $basic_grey-2, $basic_grey-2 462px, $basic_grey-2 462px);
-  }
 }
 
 .slider__image-wrapper {
@@ -37,17 +33,13 @@
   width: 50%;
   height: 100%;
   overflow: hidden;
-  background-image: linear-gradient(to top, $basic_grey-2, $basic_grey-2 462px, $basic_grey-2 462px);
-
-  @media (min-width: $desktop-width) {
-    background-image: linear-gradient(to top, $basic_grey-2, $basic_grey-2 462px, $basic_grey-2 462px);
-  }
 }
 
 .slider__image {
   position: absolute;
   display: block;
   max-width: none;
+  width: 700px;
 
   &--before {
     width: 311px;
