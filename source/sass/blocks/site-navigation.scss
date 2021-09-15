@@ -60,6 +60,10 @@
 }
 
 .site-navigation__link-promo {
+  &--active {
+    border-bottom: 2px solid $basic-green;
+  }
+
   @media (min-width: $desktop-width) {
     color: $basic-white;
 

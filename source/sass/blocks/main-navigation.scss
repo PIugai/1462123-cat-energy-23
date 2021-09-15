@@ -11,10 +11,12 @@
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
+  border-bottom: 1px solid $line-break;
 
   @media (min-width: $tablet-width) {
     grid-template-columns: 1fr auto;
     padding-right: 30px;
+    border: none;
   }
 
   @media (min-width: $desktop-width) {

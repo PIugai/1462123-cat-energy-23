@@ -1,6 +1,10 @@
 .complementary {
   margin: 20px;
 
+  @media (min-width: $tablet-width) {
+    margin-top: 68px;
+  }
+
   @media (min-width: $desktop-width) {
     max-width: $desktop-width;
     margin: auto;
@@ -13,34 +17,32 @@
   font-weight: normal;
   line-height: 2rem;
   position: relative;
+  margin-left: -20px;
 
-  &::after {
+  &::before {
     content: " ";
     position: absolute;
     top: 55%;
-    right: -20px;
-    width: 15%;
+    left: calc((1220px - 100vw) / 2);
+    width: 100vw;
     height: 2px;
     background-color: $basic-green;
+    z-index: -1;
   }
 
   @media (min-width: $tablet-width) {
-    padding-left: 67px;
-
-    &::before {
-      content: " ";
-      position: absolute;
-      top: 55%;
-      left: -20px;
-      width: 7%;
-      height: 2px;
-      background-color: $basic-green;
-    }
-
-    &::after {
-      width: 35%;
-    }
+    margin-left: 10px;
+    margin-bottom: 80px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-left: -20px;
+  }
+}
+
+.complementary__line {
+  background-color: $basic-white;
+  padding: 0 22px;
 }
 
 .complementary__wrapper {

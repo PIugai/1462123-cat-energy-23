@@ -9,7 +9,6 @@
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="images/favicons/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="images/favicons/apple.png">
-    <link rel="manifest" href="./manifest.webmanifest">
     <link rel="preload" href="./fonts/oswaldregular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   </head>
   <body class="page__body">
@@ -80,7 +79,11 @@
             </fieldset>
           </div>
           <fieldset class="plan-form__contacts plan-form__fieldset">
-            <legend class="plan-form__title">Контактые данные (владельца кота)</legend>
+            <legend class="plan-form__title">
+              <span class="plan-form__line">
+                Контактные данные (владельца кота)
+              </span>
+            </legend>
             <div class="plan-form__group">
               <label class="plan-form__label" for="email">E-mail:*</label>
               <input class="plan-form__input" type="email" id="email" name="email" placeholder="кuklachev@gmail.com" required>
@@ -91,12 +94,20 @@
             </div>
           </fieldset>
           <fieldset class="plan-form__comments plan-form__fieldset">
-            <legend class="plan-form__title">Комментарий</legend>
+            <legend class="plan-form__title">
+              <span class="plan-form__line">
+                Комментарий
+              </span>
+            </legend>
             <label class="plan-form__label" for="comments"></label>
             <textarea class="plan-form__textarea" name="comments" id="comments" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
           </fieldset>
           <fieldset class="plan-form__addons plan-form__fieldset">
-            <legend class="plan-form__title">Дополнительно</legend>
+            <legend class="plan-form__title">
+              <span class="plan-form__line">
+                Дополнительно
+              </span>
+            </legend>
             <label class="plan-form__label plan-form__label--checkbox" for="sweetener">сахарозаменитель
               <input class="plan-form__input" type="checkbox" id="sweetener" name="addons" value="sweetener" checked>
               <span class="plan-form__checkmark"></span>
