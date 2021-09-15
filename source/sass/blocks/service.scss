@@ -1,6 +1,7 @@
 .service {
   margin-top: 20px;
   padding: 0 20px;
+
   @media (min-width: $tablet-width) {
     padding: 0 30px;
   }
@@ -15,9 +16,6 @@
 .service__wrapper {
   display: grid;
   grid-template-columns: 1fr;
-
-  @media (min-width: $tablet-width) {
-  }
 
   @media (min-width: $desktop-width) {
     grid-template-columns: 1fr 1fr;
@@ -94,5 +92,4 @@
 
 .service-card__icon {
   margin-left: 17px;
-
 }
