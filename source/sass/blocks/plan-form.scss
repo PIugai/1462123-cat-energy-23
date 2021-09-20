@@ -61,6 +61,10 @@
   border: 1px solid $special-grey-4;
   padding: 10px 16px;
 
+  &:invalid {
+    border-color: $status_error;
+  }
+
   @media (min-width: $tablet-width) {
     padding: 11px 18px;
   }
@@ -107,7 +111,7 @@
   }
 }
 
-.options__wrapper {
+.plan-form__box {
   padding: 30px 30px;
   display: flex;
   flex-direction: column;
@@ -171,7 +175,6 @@
 
 .plan-form__label--radio:hover input ~ .plan-form__radio {
   border: 1px solid $special_grey-3;
-  background-color: $basic_green;
 }
 
 .plan-form__label--radio:active input ~ .plan-form__radio {
@@ -398,7 +401,6 @@
 
 .plan-form__label--checkbox:hover input ~ .plan-form__checkmark {
   border: 1px solid $special_grey-3;
-  background-color: $basic_green;
 }
 
 .plan-form__label--checkbox:active input ~ .plan-form__checkmark {
@@ -496,8 +498,4 @@ textarea:hover,
 input:hover,
 input[type]:hover {
   border-color: $special_grey;
-}
-
-.plan-form__line {
-  // background-color: $basic-white;
 }

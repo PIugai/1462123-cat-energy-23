@@ -24,6 +24,15 @@
   }
 }
 
+.slider__image--after img {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    width: 100%;
+  }
+}
+
 .slider__image-wrapper {
   position: absolute;
   z-index: 1;

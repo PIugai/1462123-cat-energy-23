@@ -7,9 +7,27 @@
   background-color: $basic_green;
   display: block;
   text-align: center;
+
+  &:hover {
+    background-color: $basic_green-2;
+  }
+
+  &:active {
+    background-color: $basic_green-2;
+    color: $basic_white_opacity;
+  }
 }
 
 .button--neutral {
   color: $basic_black;
   background-color: $basic_grey;
+
+  &:hover {
+    background-color: $special_grey-2;
+  }
+
+  &:active {
+    background-color: $special_grey-2;
+    color: $basic_black_opacity;
+  }
 }
