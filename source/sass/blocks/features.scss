@@ -1,5 +1,5 @@
 .features {
-  margin: 20px;
+  margin: 0 20px;
 
   @media (min-width: $tablet-width) {
     padding: 0 30px;
@@ -9,42 +9,64 @@
   @media (min-width: $desktop-width) {
     margin: auto;
     max-width: $desktop-width;
+    margin-bottom: -38px;
   }
 }
 
 .features__title {
   font-family: $font-family-primary;
   font-weight: normal;
-  font-size: 2.6rem;
-  line-height: 2.2rem;
-  margin-bottom: 38px;
+  font-size: 36px;
+  line-height: 30px;
+  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  max-width: 280px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 65px;
+    font-size: 60px;
+    line-height: 65px;
+    max-width: 600px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 60px;
+  }
 }
 
 .features__list {
   list-style: none;
   padding: 0;
+  margin-bottom: 36px;
 
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: auto auto;
     grid-template-rows: 1fr 1fr;
-    gap: 20px;
+    gap: 30px 60px;
+    margin-bottom: 5px;
   }
 
   @media (min-width: $desktop-width) {
     grid-template-columns: auto auto auto auto;
     grid-template-rows: 1fr;
+    gap: 45px;
   }
 }
 
 .features__item {
   display: flex;
-  align-items: center;
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  padding-top: 6px;
 
-  .features__icon {
-    margin-right: 20px;
+  img {
+    width: 150px;
+
+    @media (min-width: $tablet-width) {
+      width: 80px;
+    }
   }
 
   @media (min-width: $tablet-width) {
@@ -55,16 +77,24 @@
     justify-content: flex-start;
     align-items: flex-start;
     margin: 0;
-
-    .features__icon {
-      margin-bottom: 30px;
-    }
   }
 }
 
 .features__desc {
+  word-wrap: break-word;
+  margin: 0;
+  margin-left: 20px;
+
   @media (min-width: $tablet-width) {
-    max-width: 240px;
+    max-width: 250px;
+    margin-top: 30px;
+    margin-left: 0;
+    font-size: 16px;
+    line-height: 23px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 25px;
   }
 }
 
@@ -75,7 +105,7 @@
     display: block;
     position: absolute;
     top: 35%;
-    right: 0;
+    right: 35px;
     z-index: -1;
     font-family: $font-family-primary;
     font-size: 280px;

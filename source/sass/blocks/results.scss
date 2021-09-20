@@ -1,6 +1,5 @@
 .results {
   position: relative;
-  padding-top: 27px;
   padding-bottom: 36px;
   background-color: $basic_grey-2;
 
@@ -64,18 +63,21 @@
 .results__title {
   grid-area: title;
   margin-bottom: 33px;
-  font-size: 3rem;
+  font-size: 36px;
   font-family: $font-family-primary;
   font-weight: normal;
-  line-height: 2rem;
+  line-height: 37px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 64px;
+    font-size: 60px;
+    line-height: 65px;
+    margin-top: 0;
+    margin-bottom: 60px;
   }
 
   @media (min-width: $desktop-width) {
     margin-top: 58px;
-    margin-bottom: 147px;
+    margin-bottom: 143px;
   }
 }
 
@@ -94,7 +96,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 68px;
+    line-height: 24px;
+    margin-bottom: 65px;
   }
 }
 
@@ -103,7 +106,7 @@
   display: grid;
   grid-template-columns: repeat(2, max-content);
   justify-content: center;
-  gap: 35px 30px;
+  gap: 35px 28px;
   margin: 0;
   margin-bottom: 38px;
 

@@ -1,49 +1,70 @@
 .contacts__wrapper {
   background-color: $basic-grey;
-  display: flex;
-  padding: 28px 20px;
-  justify-content: space-between;
+  display: grid;
+  padding: 10px 20px;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
 
   @media (min-width: $tablet-width) {
-    padding: 71px;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 50px 75px;
   }
 
   @media (min-width: $desktop-width) {
     background-color: $basic-white;
     position: absolute;
-    top: 20%;
-    left: 16%;
+    top: 18%;
+    left: 8%;
     z-index: 3;
-    width: 510px;
-    padding: 66px 77px;
+    width: 425px;
+    padding: 55px 70px;
+    display: flex;
+  }
+
+  &--white {
+    background-color: $basic-white;
   }
 }
 
 .contacts__slogan {
   font-family: $font-family-primary;
-  font-size: 1.1rem;
+  font-size: 16px;
+  line-height: 20px;
   text-transform: uppercase;
-  max-width: 171px;
 
   @media (min-width: $tablet-width) {
-    font-size: 1.2rem;
-    line-height: 1.5rem;
+    font-size: 20px;
+    line-height: 25px;
+    margin-bottom: 15px;
   }
 
   @media (min-width: $desktop-width) {
     margin: 0;
+    margin-top: 10px;
+    max-width: 200px;
+    margin-right: 50px;
   }
 }
 
 .contacts__address {
-  line-height: 1.1rem;
+  line-height: 20px;
   font-style: normal;
 
   @media (min-width: $tablet-width) {
-    font-size: 1.1rem;
-    line-height: 1.1rem;
+    grid-column-start: 3;
+    font-size: 16px;
+    line-height: 20px;
     text-align: right;
+    margin-top: 5px;
+
+    span {
+      padding-bottom: 20px;
+      display: block;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
   }
 }
 

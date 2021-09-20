@@ -39,7 +39,7 @@
   position: absolute;
   display: block;
   max-width: none;
-  width: 700px;
+  width: 320px;
 
   &--before {
     width: 311px;
@@ -98,6 +98,7 @@
   display: block;
   padding: 0;
   font-size: 16px;
+  font-family: $font-family-primary;
   line-height: 20px;
   color: $basic_black;
   text-transform: uppercase;

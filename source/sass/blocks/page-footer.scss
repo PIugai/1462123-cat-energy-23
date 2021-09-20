@@ -1,0 +1,93 @@
+.page-footer {
+  position: relative;
+  background-color: $basic-grey;
+}
+
+.page-footer__wrapper {
+  background-color: $basic-grey;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 30px;
+    align-items: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: $desktop-width;
+    margin: auto;
+  }
+}
+
+.page-footer__logo {
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 12px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    padding-top: 30px;
+    padding-bottom: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 35px;
+  }
+}
+
+.page-footer__logo svg {
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.page-footer__partner {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: $basic-black;
+  font-size: 16px;
+  margin-bottom: 22px;
+  width: 100%;
+  justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+    width: auto;
+    margin: 0;
+
+    p {
+      margin-right: 15px;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  svg {
+    fill: $special_dark-grey-2;
+
+    &:hover {
+      fill: $basic-green;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    p {
+      padding-top: 10px;
+    }
+  }
+}

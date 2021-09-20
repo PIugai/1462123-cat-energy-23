@@ -6,6 +6,9 @@
 // Common
 @import "./blocks/visually-hidden.scss";
 @import "./blocks/page.scss";
+@import "./blocks/page-header.scss";
+@import "./blocks/page-main.scss";
+@import "./blocks/page-footer.scss";
 @import "./blocks/button.scss";
 @import "./blocks/contacts.scss";
 @import "./blocks/container.scss";
@@ -19,10 +22,16 @@
 @import "./blocks/results.scss";
 @import "./blocks/slider.scss";
 @import "./blocks/service.scss";
+@import "./blocks/service-card.scss";
 
 // Catalog page styles
 @import "./blocks/catalog.scss";
+@import "./blocks/catalog-item.scss";
 @import "./blocks/complementary.scss";
+@import "./blocks/complementary-list.scss";
+@import "./blocks/complementary-product.scss";
+@import "./blocks/complementary-promo.scss";
 
 // Form page styles
 @import "./blocks/plan.scss";
+@import "./blocks/plan-form.scss";

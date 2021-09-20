@@ -9,8 +9,8 @@
     <link rel="preload" href="./js/script.min.js" as="script">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
     <link rel="icon" href="favicon.ico">
-    <link rel="icon" href="images/favicons/icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="images/favicons/apple.png">
+<link rel="icon" href="./img/favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="./img/favicons/apple.png">
     <link rel="preload" href="./fonts/oswaldregular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   </head>
   <body class="page__body">
@@ -44,7 +44,9 @@
       <h1 class="visually-hidden page-main__title">Подбор Программы - Кэт энерджи: Магазин Функционального питания для котов</h1>
       <section class="plan">
         <h2 class="plan__title">Подбор программы</h2>
-        <p class="plan__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+        <div class="plan__container">
+          <p class="plan__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+        </div>
         <form class="plan-form" action="#">
           <div class="plan__wrapper">
             <fieldset class="plan-form__general plan-form__fieldset">
@@ -86,11 +88,11 @@
                 Контактные данные (владельца кота)
               </span>
             </legend>
-            <div class="plan-form__group">
+            <div class="plan-form__group plan-form__group--email">
               <label class="plan-form__label" for="email">E-mail:*</label>
               <input class="plan-form__input" type="email" id="email" name="email" placeholder="кuklachev@gmail.com" required>
             </div>
-            <div class="plan-form__group">
+            <div class="plan-form__group plan-form__group--tel">
               <label class="plan-form__label" for="tel">Телефон:*</label>
               <input class="plan-form__input" type="tel" id="tel" name="tel" placeholder="8 (960) 900-60-90" required>
             </div>
@@ -102,7 +104,7 @@
               </span>
             </legend>
             <label class="plan-form__label" for="comments"></label>
-            <textarea class="plan-form__textarea" name="comments" id="comments" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
+            <textarea class="plan-form__textarea" name="comments" id="comments" cols="30" rows="5" placeholder="Расскажите обо всех повадках кота"></textarea>
           </fieldset>
           <fieldset class="plan-form__addons plan-form__fieldset">
             <legend class="plan-form__title">
@@ -127,7 +129,7 @@
               <span class="plan-form__checkmark"></span>
             </label>
           </fieldset>
-          <div class="plan-form__wrapper">
+          <div class="plan-form__container">
             <input class="plan-form__button button" type="submit" value="отправить заявку">
             <p class="plan-form__details">* — Обязательные поля</p>
           </div>
@@ -185,7 +187,7 @@
             </a>
           </li>
         </ul>
-        <a class="page-footer__partner" href="https://www.htmlacademy.ru">
+        <a class="page-footer__partner" href="https://htmlacademy.ru/intensive/adaptive">
           <p>HTML Academy</p>
           <svg class="logo__img-svg" width="34" height="34">
             <use xlink:href="img/sprite.svg#icon-academy"></use>
@@ -200,7 +202,7 @@
       </section>
     </template>
 
-    <script src="./js/script.min.js"></script>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="./js/script.min.js"></script>
   </body>
 </html>

@@ -15,7 +15,7 @@
 
   @media (min-width: $tablet-width) {
     grid-template-columns: 1fr auto;
-    padding-right: 30px;
+    padding: 0 30px;
     border: none;
   }
 
@@ -24,7 +24,21 @@
   }
 }
 
+.main-navigation__logo img {
+  @media (min-width: $tablet-width) {
+    width: 175px;
+    margin-top: 12px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 200px;
+    margin-top: 48px;
+  }
+}
+
 .main-navigation__logo-text {
+  width: 100px;
+
   @media (min-width: $tablet-width) {
     display: none;
   }
@@ -50,12 +64,12 @@
 .main-navigation--closed .main-navigation__toggle::before {
   content: "";
   position: absolute;
-  top: 24px;
-  left: 20px;
+  top: 22px;
+  left: 21px;
   width: 24px;
   height: 1.5px;
   background-color: $basic-black;
-  box-shadow: 0 8px 0 0 $basic-black, 0 16px 0 0 $basic-black;
+  box-shadow: 0 9px 0 0 $basic-black, 0 17px 0 0 $basic-black;
 }
 
 .main-navigation--opened .main-navigation__toggle {
@@ -64,8 +78,8 @@
     content: "";
     position: absolute;
     top: 30px;
-    left: 23px;
-    width: 25px;
+    left: 20px;
+    width: 24px;
     height: 1.5px;
     background-color: $basic-black;
     transform: rotate(45deg);

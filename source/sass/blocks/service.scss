@@ -10,7 +10,7 @@
   @media (min-width: $desktop-width) {
     margin: auto;
     max-width: $desktop-width;
-    padding: 0;
+    margin-top: -205px;
   }
 }
 
@@ -22,76 +22,4 @@
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 80px;
   }
-}
-
-.service-card {
-  padding: 20px;
-  background-color: $basic_grey;
-  min-width: 280px;
-  margin: 10px 0;
-  display: grid;
-  grid-template-columns: auto 1fr;
-  grid-template-areas:
-    "logo title"
-    "desc desc"
-    "btn btn";
-
-  @media (min-width: $tablet-width) {
-    margin-bottom: 30px;
-    grid-template-columns: 1fr auto;
-    grid-column-gap: 20px;
-    grid-template-areas:
-      "title logo"
-      "desc logo"
-      "btn logo";
-  }
-
-  @media (min-width: $desktop-width) {
-    max-width: 570px;
-    padding: 50px;
-  }
-}
-
-.service-card__logo {
-  grid-area: logo;
-  margin: auto;
-
-  @media (min-width: $tablet-width) {
-    width: 200px;
-  }
-}
-
-.service-card__title {
-  font-family: $font-family-primary;
-  font-weight: normal;
-  margin-left: 10px;
-  font-size: 1.7rem;
-  line-height: 2rem;
-  grid-area: title;
-
-  @media (min-width: $tablet-width) {
-    margin-left: 0;
-  }
-}
-
-.service-card__desc {
-  grid-area: desc;
-  padding-bottom: 20px;
-  border-bottom: 1px solid $line-break;
-
-  @media (min-width: $tablet-width) {
-    border: none;
-  }
-}
-
-.service-card__btn {
-  grid-area: btn;
-  background-color: transparent;
-  color: $basic-black;
-  padding: 15px 0;
-  text-align: left;
-}
-
-.service-card__icon {
-  margin-left: 17px;
 }
